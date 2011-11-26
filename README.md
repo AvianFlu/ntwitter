@@ -88,6 +88,12 @@ ntwitter also supports user and site streams:
           stream.on('data', function (data) {
             console.log(console.dir(data));
           });
+          stream.on('end', function (response) {
+            // Handle a disconnection
+          });
+          stream.on('destroy', function (response) {
+            // Handle a 'silent' disconnection from Twitter, no end/error event fired
+          });
           // Disconnect stream after five seconds
           setTimeout(stream.destroy, 5000);
         });
