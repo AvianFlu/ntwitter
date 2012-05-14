@@ -58,9 +58,9 @@ Note that all functions may be chained:
 
 ### Search API 
 
-        twit.search('nodejs OR #node', function(err, data) {
-          console.log(data);
-        });
+		twit.search('nodejs OR #node', {}, function(err, data) {
+		  console.log(data);
+		});
 
 ### Streaming API 
 
