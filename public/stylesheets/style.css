@@ -7,3 +7,12 @@ body {
 a {
   color: #00B7FF;
 }
+
+.beigeOptions {
+	width: 100px;
+	height: 100px;
+	float: left;
+	margin: 10px;
+	border: 1px solid #000;
+}
+

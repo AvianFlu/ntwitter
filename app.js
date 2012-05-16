@@ -42,6 +42,7 @@ app.dynamicHelpers({
 })
 
 // Routes
+// Index - {}
 app.get('/', routes.index);
 app.post('/', routes.postIndex);
 

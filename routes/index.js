@@ -8,7 +8,11 @@ var vote = require('./vote.js');
 
 
 exports.index = function(req, res){
-  res.render('index', { title: 'Shades of Beige' })
+  res.render('index', { 
+  	title: 'Shades of Beige', 
+  	hex1: '#', 
+  	hex2: '#' 
+  });
 };
 
 exports.postIndex = function (req, res) {

@@ -35,6 +35,14 @@ exports.addVote = function (hexColor, userObj, callback) {
 			console.log('Votedb.js addVote: Voted');
 			callback(null, true);
 		}
-	})
+	});
 
+}
+
+function voteCouter = function(hexColor) {
+	
+}
+
+exports.topTwo = function (callback) {
+	voteModel.find()
 }
