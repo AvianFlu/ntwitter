@@ -38,7 +38,7 @@ app.post('/vote', routes.vote.postVote);
 
 app.get('/beiged', routes.vote.done);
 
-app.get('/claim-a-beige'. routes.claim.index);
+app.get('/claim-a-beige', routes.claim.index);
 
 
 

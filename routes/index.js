@@ -3,8 +3,8 @@
  * GET home page.
  */
 
-var claim = require('/claim.js');
-var vote = require('/vote.js');
+var claim = require('./claim.js');
+var vote = require('./vote.js');
 
 
 exports.index = function(req, res){
@@ -14,3 +14,6 @@ exports.index = function(req, res){
 exports.postIndex = function (req, res) {
 
 };
+
+exports.vote = vote;
+exports.claim = claim;
