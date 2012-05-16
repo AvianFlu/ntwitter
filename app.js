@@ -29,6 +29,18 @@ app.configure('production', function(){
   app.use(express.errorHandler()); 
 });
 
+app.dynamicHelpers({
+  username: function (req, res) {
+    return req.session.username || undefined;
+  },
+  current: function (req, res) {
+    return req.url;
+  },
+  redir: function (req, res) {
+    return req.session.redir || undefined;
+  }
+})
+
 // Routes
 app.get('/', routes.index);
 app.post('/', routes.postIndex);
@@ -39,6 +51,9 @@ app.post('/vote', routes.vote.postVote);
 app.get('/beiged', routes.vote.done);
 
 app.get('/claim-a-beige', routes.claim.index);
+app.post('/claim-a-beige', routes.claim.claimBeige);
+
+
 
 
 
