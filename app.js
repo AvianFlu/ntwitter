@@ -31,6 +31,16 @@ app.configure('production', function(){
 
 // Routes
 app.get('/', routes.index);
+app.post('/', routes.postIndex);
+
+app.get('/vote', routes.vote.index);
+app.post('/vote', routes.vote.postVote);
+
+app.get('/beiged', routes.vote.done);
+
+app.get('/claim-a-beige'. routes.claim.index);
+
+
 
 app.listen(3000);
 console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
