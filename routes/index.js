@@ -8,7 +8,7 @@ var vote = require('./vote.js');
 
 exports.index = function(req, res){
   var params = { 
-    title: 'Shades of Beige', 
+    title: 'Subtle Variations of Beige', 
     beiges: [
       {
         name: "Blanched Almonds",

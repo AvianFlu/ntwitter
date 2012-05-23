@@ -14,8 +14,7 @@ body
   header
     position absolute
     width 100%
-    h1
-      text-align center
+    text-align center 
 
   #outer
     overflow hidden
@@ -24,7 +23,7 @@ body
       width 50%   
       float left
       height 100%
-      padding-top 400px
+      padding-top 350px
       text-align center
 
 
@@ -36,6 +35,21 @@ body
     display block
     position fixed
     bottom 0
+    div.tweet
+      color #ffffff
+      width 70%
+      float left
+      span
+        display inline
+        margin-right 10px
+        &:after
+          content ":"
+      p
+        display inline
+        margin 0
+    a.cta
+      float right
+      margin-left 20px
 
 
 
