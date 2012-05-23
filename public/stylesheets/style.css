@@ -1,6 +1,12 @@
+html {
+  padding: 0;
+  height: 100%;
+}
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  min-height: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
 }
 body a {
   color: #00b7ff;
@@ -12,15 +18,19 @@ body header {
 body header h1 {
   text-align: center;
 }
-body .choices {
+body #outer {
+  overflow: hidden;
+  height: 100%;
+}
+body #outer .choices {
   width: 50%;
   float: left;
-  min-height: 200px;
+  height: 100%;
   padding-top: 400px;
   text-align: center;
 }
 body footer {
-  height: 50px;
+  height: 20px;
   background: #232323;
   width: 96%;
   padding: 2%;

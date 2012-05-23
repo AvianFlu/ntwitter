@@ -1,6 +1,12 @@
+html
+  padding 0
+  height 100%
+
 body 
   font 14px "Lucida Grande", Helvetica, Arial, sans-serif
-  min-height 100%
+  height 100%
+  padding 0
+  margin 0  
 
   a 
     color #00B7FF
@@ -11,17 +17,19 @@ body
     h1
       text-align center
 
-
-  .choices 
-    width 50%   
-    float left
-    min-height 200px
-    padding-top 400px
-    text-align center
+  #outer
+    overflow hidden
+    height 100%
+    .choices 
+      width 50%   
+      float left
+      height 100%
+      padding-top 400px
+      text-align center
 
 
   footer
-    height 50px
+    height 20px
     background #232323
     width 96%
     padding 2%
