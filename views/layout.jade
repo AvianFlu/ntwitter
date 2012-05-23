@@ -9,11 +9,15 @@ html
   body
     header
       h1 Subtle Variations of Beige
+      h2 The world is too colourful
     != body
     footer
+      div.tweet
+        span @someonebeigey
+        p this is the tweet
       - if (user != undefined)
         a(href='#/#{user.username}/') #{user.username}
       - else
-        a(href='/auth/twitter') login
-      a(href='#/claim') claim a beige
-      a(href='#/hall') hall of beige
+        a(href='/auth/twitter') Login
+      a.cta(href="#") Claim your Beige
+      a.cta(href="#") The Hall of beige
