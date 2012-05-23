@@ -14,8 +14,6 @@ body a {
 body header {
   position: absolute;
   width: 100%;
-}
-body header h1 {
   text-align: center;
 }
 body #outer {
@@ -37,4 +35,23 @@ body footer {
   display: block;
   position: fixed;
   bottom: 0;
+}
+body footer div.tweet {
+  color: #fff;
+  width: 70%;
+  float: left;
+}
+body footer div.tweet span {
+  display: inline;
+  margin-right: 10px;
+}
+body footer div.tweet span:after {
+  content: ":";
+}
+body footer div.tweet p {
+  display: inline;
+  margin: 0;
+}
+body footer a {
+  float: right;
 }
