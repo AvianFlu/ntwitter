@@ -52,6 +52,7 @@ body footer div.tweet p {
   display: inline;
   margin: 0;
 }
-body footer a {
+body footer a.cta {
   float: right;
+  margin-left: 20px;
 }
