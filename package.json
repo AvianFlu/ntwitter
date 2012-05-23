@@ -8,5 +8,7 @@
     , "jade": ">= 0.0.1"
     , "gzippo": ">= 0.1.0"
     , "mongoose": ">= 2.6.4"
+    , "passport": ">= 0.0.1"
+    , "passport-twitter": ">= 0.0.1"
   }
 }

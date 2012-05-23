@@ -11,5 +11,9 @@ html
       h1 Subtle Variations of Beige
     != body
     footer
-      a claim a beige
-      a hall of beige
+      - if (user != undefined)
+        a(href='#/#{user.username}/') #{user.username}
+      - else
+        a(href='/auth/twitter') login
+      a(href='#/claim') claim a beige
+      a(href='#/hall') hall of beige
