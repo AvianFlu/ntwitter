@@ -6,18 +6,33 @@ mongoose.connect('mongodb://localhost/beige');
 var Schema = mongoose.Schema,
 	ObjectId = Schema.ObjectId;
 
-var voteSchema = new Schema({
+var claimSchema = new Schema({
 	_id: String,
-	hexColor: String,
-	votedDateTime: Date,
-	twitterAccount: String,
-	sessionId: String,
-	ipAddress: String
+	hexColour: String,
+	twitterId: String
 });
 
-var voteModel = mongoose.model('votes', voteSchema);
+var claimModel = mongoose.model('claims', claimSchema);
 
-exports.addVote = function (hexColor, userObj, callback) {
+exports.claimBeige = function (hexColour, twitterid, callback) {
+	var inst = new claimModel();
+	inst.hexColour = hexColour;
+	inst.twitterid = twitterid;
+
+	inst.save (function(err) {
+		if(err) {
+			console.error('db error (claimdb.js):', err);
+			callback(err);
+		}
+		else {
+			console.log('Beige Claimed: ', hexColour);
+			callback(null, hexColour);
+		}
+	});
+}
+
+
+/*exports.cl = function (hexColor, userObj, callback) {
 
 	var inst = new voteModel();
 	inst.hexColor = hexColor;
@@ -37,9 +52,9 @@ exports.addVote = function (hexColor, userObj, callback) {
 		}
 	});
 
-}
+}*/
 
-function voteCounter = function(hexColor) {
+function voteCouter = function(hexColor) {
 	
 }
 
