@@ -26,7 +26,7 @@ exports.claimBeige = function (hexColour, twitterid, callback) {
 		}
 		else {
 			console.log('Beige Claimed: ', hexColour);
-			callback(null, hexColour);
+			callback(null, hexColour);	
 		}
 	});
 }
@@ -54,10 +54,10 @@ exports.claimBeige = function (hexColour, twitterid, callback) {
 
 }*/
 
-function voteCouter = function(hexColor) {
+/*function voteCouter = function(hexColor) {
 	
 }
 
 exports.topTwo = function (callback) {
 	voteModel.find()
-}
+}*/
