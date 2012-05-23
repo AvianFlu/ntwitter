@@ -15,5 +15,9 @@ html
       div.tweet
         span @someonebeigey
         p this is the tweet
+      - if (user != undefined)
+        a(href='#/#{user.username}/') #{user.username}
+      - else
+        a(href='/auth/twitter') Login
       a.cta(href="#") Claim your Beige
       a.cta(href="#") The Hall of beige
