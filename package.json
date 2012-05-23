@@ -4,8 +4,8 @@
   , "private": true
   , "dependencies": {
       "express": "2.5.2"
+    , "stylus": ">= 0.0.1"
     , "jade": ">= 0.0.1"
-    , "passport": ">= 0.2.3"
     , "mongoose": ">= 2.6.4"
   }
 }

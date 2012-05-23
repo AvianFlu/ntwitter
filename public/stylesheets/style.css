@@ -1,18 +1,30 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: #FFEBCD;
+  min-height: 100%;
 }
-
-a {
-  color: #00B7FF;
+body a {
+  color: #00b7ff;
 }
-
-.beigeOptions {
-	width: 100px;
-	height: 100px;
-	float: left;
-	margin: 10px;
-	border: 1px solid #000;
+body header {
+  position: absolute;
+  width: 100%;
 }
-
+body header h1 {
+  text-align: center;
+}
+body .choices {
+  width: 50%;
+  float: left;
+  min-height: 200px;
+  padding-top: 400px;
+  text-align: center;
+}
+body footer {
+  height: 50px;
+  background: #232323;
+  width: 96%;
+  padding: 2%;
+  display: block;
+  position: fixed;
+  bottom: 0;
+}
