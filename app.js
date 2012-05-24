@@ -7,7 +7,8 @@ var express = require('express')
   , routes = require('./routes')
   , gzippo = require('gzippo')
   , passport = require('passport')
-  , TwitterStrategy = require('passport-twitter').Strategy;
+  , TwitterStrategy = require('passport-twitter').Strategy
+  , usersdb = require('./db/usersdb.js');
 
 var TWITTER_CONSUMER_KEY = "3dSMazwNQ23SygBs40hsg"
 var TWITTER_CONSUMER_SECRET = "LaY7pVhK1PkvoJG3zxYnoZrN90CoK85wFE9ypxHik";
@@ -33,6 +34,16 @@ passport.use(new TwitterStrategy({
       // represent the logged-in user.  In a typical application, you would want
       // to associate the Twitter account with a user record in your database,
       // and return that user instead.
+      console.log('profile:', profile);
+      var twitObj = {
+        id: profile.id,
+        name: profile.username,
+        display: profile.displayName
+      }
+      usersdb.userLogin(twitObj, function (err, res) {
+        console.log(res);
+        req.session.userid = twitObj.id;
+      })
       return done(null, profile);
     });
   }

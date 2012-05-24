@@ -12,7 +12,8 @@ var voteSchema = new Schema({
 	votedDateTime: Date,
 	twitterAccount: String,
 	sessionId: String,
-	ipAddress: String
+	ipAddress: String,
+	userid: Number
 });
 
 var voteModel = mongoose.model('votes', voteSchema);
@@ -23,6 +24,7 @@ exports.addVote = function (hexColor, userObj, callback) {
 	inst.hexColor = hexColor;
 	inst.votedDateTime = new Date();
 
+	if(userObj.id !== undefined) { inst.userid = userObj.id;}
 	if(userObj.twitterAccount !== undefined) { inst.twitterAccount = userObj.twitterAccount; }
 	if(userObj.sessionId !== undefined) { inst.sessionId = userObj.sessionId; }
 
@@ -39,7 +41,7 @@ exports.addVote = function (hexColor, userObj, callback) {
 
 }
 
-function voteCounter = function(hexColor) {
+function voteCounter (hexColor) {
 	
 }
 
