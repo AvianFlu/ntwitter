@@ -11,8 +11,8 @@ var express = require('express')
   , usersdb = require('./db/usersdb.js')
   , TWITTER_KEYS = require('./private.js');
 
-var TWITTER_CONSUMER_KEY = TWITTER_KEYS.TWITTER_CONSUMER_KEY;// "3dSMazwNQ23SygBs40hsg"
-var TWITTER_CONSUMER_SECRET = TWITTER_KEYS.TWITTER_CONSUMER_SECRET; //"LaY7pVhK1PkvoJG3zxYnoZrN90CoK85wFE9ypxHik";
+var TWITTER_CONSUMER_KEY = TWITTER_KEYS.TWITTER_CONSUMER_KEY;
+var TWITTER_CONSUMER_SECRET = TWITTER_KEYS.TWITTER_CONSUMER_SECRET; 
 
 passport.serializeUser(function(user, done) {
   done(null, user);
