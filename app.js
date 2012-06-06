@@ -40,7 +40,7 @@ passport.use(new TwitterStrategy({
       // represent the logged-in user.  In a typical application, you would want
       // to associate the Twitter account with a user record in your database,
       // and return that user instead.
-      console.log('profile:', profile);
+/*      console.log('profile:', profile);
       var twitObj = {
         id: profile.id,
         name: profile.username,
@@ -50,7 +50,7 @@ passport.use(new TwitterStrategy({
         console.log(res);
         //req.session.userid = twitObj.id;
       })
-      return done(null, profile);
+      return done(null, profile);*/
     });
   }
 ));
