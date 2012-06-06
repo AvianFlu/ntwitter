@@ -16,9 +16,10 @@ exports.index = function (req, res) {
 
 exports.claimBeige = function (req, res) {
 	var hex = req.body.hex;
+	var name = req.body.name;
 	
-	if(req.session.userid !== undefined) {
-		claimdb.claimBeige(hex, req.session.user_id, function(err, hex) {
+	if(req.session.user_id !== undefined) {
+		claimdb.claimBeige(hex, name, req.session.user_id, function(err, hex) {
 			if(err) {
 				result(null, res);
 			}

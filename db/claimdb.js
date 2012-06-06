@@ -16,10 +16,11 @@ var claimSchema = new Schema({
 
 var claimModel = mongoose.model('claims', claimSchema);
 
-exports.claimBeige = function (hexColour, twitterid, callback) {
+exports.claimBeige = function (hexColour, name, twitterid, callback) {
 	var inst = new claimModel();
-	inst.hexColour = hexColour;
-	inst.twitterid = twitterid;
+	inst.hex = hexColour;
+	inst.name = name;
+	inst.twitterId = twitterid;
 
 	inst.save (function(err) {
 		if(err) {
