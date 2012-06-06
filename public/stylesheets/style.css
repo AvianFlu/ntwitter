@@ -252,7 +252,8 @@ td {
 }
 body {
   font: 14px "futura-pt", "Lucida Grande", Helvetica, Arial, sans-serif;
-  color: #010101;
+  color: #464646;
+  font-weight: 400;
 }
 a {
   color: #00b7ff;
@@ -261,8 +262,12 @@ a {
 h1 {
   font-family: "bello-pro", sans-serif;
   font-size: 38px;
+<<<<<<< HEAD
+  color: #464646;
+=======
   color: #5c5a58;
   font-weight: normal;
+>>>>>>> 8c645cb980215bf95161d05a118fce9455acd913
   text-shadow: 1px 1px 0px #fff3e1;
 }
 h2 {
@@ -290,6 +295,14 @@ body header {
   width: 100%;
   text-align: center;
   z-index: 200;
+  padding-top: 25px;
+}
+body header h1 {
+  width: 300px;
+  height: 100px;
+  background: url("/img/logo.png") no-repeat;
+  text-indent: -9999px;
+  margin: 0 auto;
 }
 body div.content {
   overflow: hidden;
@@ -429,10 +442,7 @@ div#vs div.vs {
   margin: -100px 0px 0px -50px;
   z-index: 200;
   color: #fff;
-  background: -webkit-linear-gradient(top, #484848, #3f3f3f);
-  border: 1px solid #161616;
-  text-shadow: 1px 1px 0px rgba(0,0,0,0.4);
-  box-shadow: inset 0px 1px 0px rgba(255,255,255,0.2), 1px 1px 4px rgba(0,0,0,0.1);
+  background: #464646;
 }
 div#vs div.vs span {
   font-size: 50px;
@@ -462,24 +472,33 @@ div#vs .choice div.desc {
   height: 300px;
   position: absolute;
   top: 50%;
-  margin-top: -150px;
+  margin-top: -120px;
   width: 100%;
 }
-div#vs .choice div.desc h2,
-div#vs .choice div.desc h3 {
-  text-shadow: 1px 1px 1px #fff;
+div#vs .choice div.desc .name {
+  font-family: "futura-pt", "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 30px;
+  margin: 0px;
+}
+div#vs .choice div.desc .hex {
+  margin: 0px 0px 20px 0px;
+  font-size: 20px;
+  text-transform: lowercase;
+  color: #8a8a8a;
 }
 #beigeClaim {
   width: 300px;
   margin: 0 auto;
+  display: block;
+  padding-top: 70px;
 }
 #beigeClaim input {
   width: 300px;
   padding: 10px;
   outline: none;
   font-size: 18px;
-  border: 1px solid #cecece;
-  background-color: #fff;
+  border: 1px solid #8a8a8a;
+  background-color: rgba(255,255,255,0.8);
 }
 #beigeClaim input.name {
   border-bottom: none;
