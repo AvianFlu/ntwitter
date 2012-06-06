@@ -12,6 +12,13 @@ body
     width 100%
     text-align center
     z-index 200
+    padding-top 25px
+    h1
+      width 300px
+      height 100px
+      background url(/img/logo.png) no-repeat
+      text-indent -9999px
+      margin 0 auto
 
   div.content
     overflow hidden
@@ -120,3 +127,12 @@ a.light_button
     background -webkit-linear-gradient(top, darken(#f2f2f2, 4%), darken(#f2f2f2, 9%))
   &:active
     margin-top 1px
+a.login
+  background -webkit-linear-gradient(top, #bf4d28, darken(#bf4d28, 12%))
+  color #ffffff
+  text-shadow 1px 1px 0px rgba(darken(#bf4d28, 40%), 0.6)
+  box-shadow inset 0px 1px 0px rgba(lighten(#bf4d28, 40%), 1)
+  border 1px solid darken(#bf4d28, 20%)
+  border-bottom-color darken(#bf4d28, 50%)
+  &:hover
+    background -webkit-linear-gradient(top, lighten(#bf4d28, 10%), darken(#bf4d28, 5%))
