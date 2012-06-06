@@ -258,6 +258,12 @@ a {
   color: #00b7ff;
   text-decoration: none;
 }
+h1 {
+  font-family: "bello-pro", sans-serif;
+  font-size: 38px;
+  color: #5c5a58;
+  text-shadow: 1px 1px 0px #fff3e1;
+}
 html {
   padding: 0;
   height: 100%;
@@ -479,9 +485,9 @@ div#vs .choice div.desc h3 {
   -moz-border-radius-bottomright: 7px;
   border-bottom-left-radius: 7px;
   border-bottom-right-radius: 7px;
+  margin-bottom: 20px;
 }
 #beigeClaim input[type="submit"] {
-  margin-top: 20px;
   width: 322px;
   display: inline-block;
   color: #555;
