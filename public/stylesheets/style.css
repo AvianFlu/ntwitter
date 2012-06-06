@@ -419,6 +419,7 @@ a.light_button {
 }
 a.light_button:hover {
   background: -webkit-linear-gradient(top, #e8e8e8, #dcdcdc);
+  cursor: pointer;
 }
 a.light_button:active {
   margin-top: 1px;
@@ -504,11 +505,12 @@ div#vs .choice div.desc .hex {
 }
 #beigeClaim input {
   width: 300px;
-  padding: 10px;
+  padding: 15px;
   outline: none;
   font-size: 18px;
-  border: 1px solid #8a8a8a;
+  border: 1px solid #c5c5c5;
   background-color: rgba(255,255,255,0.8);
+  box-shadow: inset 0px 1px 0px #f2f2f2;
 }
 #beigeClaim input.name {
   border-bottom: none;
@@ -528,8 +530,11 @@ div#vs .choice div.desc .hex {
   border-bottom-right-radius: 7px;
   margin-bottom: 20px;
 }
+#beigeClaim input:focus {
+  background: #fff;
+}
 #beigeClaim input[type="submit"] {
-  width: 322px;
+  width: 332px;
   display: inline-block;
   color: #555;
   padding: 0.8em 1.5em;

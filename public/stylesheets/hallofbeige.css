@@ -1,3 +1,6 @@
+.content {
+  height: auto;
+}
 #beigehall ul {
   list-style-type: none;
   margin: 0;
@@ -18,13 +21,13 @@
 #beigehall ul h3 {
   float: left;
   font-size: 24px;
+  margin-bottom: 8px;
 }
 #beigehall ul h4 {
   float: right;
 }
 #beigehall ul span {
-  margin-left: 10px;
-  margin-top: 8px;
   font-size: 16px;
-  display: inline-block;
+  display: block;
+  clear: both;
 }
