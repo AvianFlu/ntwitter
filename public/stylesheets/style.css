@@ -258,6 +258,12 @@ a {
   color: #00b7ff;
   text-decoration: none;
 }
+h1 {
+  font-family: "bello-pro", sans-serif;
+  font-size: 38px;
+  color: #5c5a58;
+  text-shadow: 1px 1px 0px #fff3e1;
+}
 html {
   padding: 0;
   height: 100%;
@@ -266,7 +272,6 @@ body {
   height: 100%;
   padding: 0;
   margin: 0;
-  input: #999;
 }
 body header {
   position: absolute;
