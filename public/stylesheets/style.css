@@ -423,6 +423,17 @@ a.light_button:hover {
 a.light_button:active {
   margin-top: 1px;
 }
+a.login {
+  background: -webkit-linear-gradient(top, #bf4d28, #a84423);
+  color: #fff;
+  text-shadow: 1px 1px 0px rgba(115,46,24,0.6);
+  box-shadow: inset 0px 1px 0px #e28f75;
+  border: 1px solid #993e20;
+  border-bottom-color: #602714;
+}
+a.login:hover {
+  background: -webkit-linear-gradient(top, #d4582f, #b54926);
+}
 div#vs {
   overflow: hidden;
   height: 100%;

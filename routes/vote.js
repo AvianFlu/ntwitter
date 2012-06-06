@@ -32,9 +32,9 @@ exports.postVote = function (req, res) {
 				});
 				res.end('{"voted": true}');
 		}
-	})
+	});
 
-
+	req.session.beiges = undefined;
 
 }
 
