@@ -1,5 +1,5 @@
 
-/**
+/*
  * Module dependencies.
  */
 
@@ -109,7 +109,7 @@ app.post('/claim-a-beige', routes.claim.claimBeige);
 
 app.get('/hall-of-beige', routes.hallofbeige.index);
 
-app.get('/beige-watch', routes.beigewatch.index);
+app.get('/beigewatch', routes.beigewatch.index);
 
 app.get('/auth/twitter',
   passport.authenticate('twitter'),
