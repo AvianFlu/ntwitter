@@ -1,0 +1,27 @@
+#beigehall ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+#beigehall ul li {
+  width: 96%;
+  margin: 0;
+  padding: 40px 2%;
+}
+#beigehall ul h3,
+#beigehall ul h4 {
+  margin: 0;
+}
+#beigehall ul h3 {
+  float: left;
+  font-size: 24px;
+}
+#beigehall ul h4 {
+  float: right;
+}
+#beigehall ul span {
+  margin-left: 10px;
+  margin-top: 8px;
+  font-size: 16px;
+  display: inline-block;
+}

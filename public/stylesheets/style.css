@@ -262,7 +262,17 @@ h1 {
   font-family: "bello-pro", sans-serif;
   font-size: 38px;
   color: #5c5a58;
+  font-weight: normal;
   text-shadow: 1px 1px 0px #fff3e1;
+}
+h2 {
+  font: 18px "futura-pt", "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: #010101;
+  font-weight: bold;
+}
+h2.subtitle {
+  text-align: center;
+  margin-top: 90px;
 }
 html {
   padding: 0;
