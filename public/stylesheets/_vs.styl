@@ -13,10 +13,11 @@ div#vs
     margin -100px 0px 0px -50px
     z-index 200
     color #ffffff
-    background -webkit-linear-gradient(top, #484848, darken(#484848, 12%))
-    border 1px solid darken(#484848, 70%)
-    text-shadow 1px 1px 0px rgba(#000000, .4)
-    box-shadow inset 0px 1px 0px rgba(#ffffff, .2), 1px 1px 4px rgba(#000000, .1)
+    background $bodyText
+    // background -webkit-linear-gradient(top, #484848, darken(#484848, 12%))
+    // border 1px solid darken(#484848, 70%)
+    // text-shadow 1px 1px 0px rgba(#000000, .4)
+    // box-shadow inset 0px 1px 0px rgba(#ffffff, .2), 1px 1px 4px rgba(#000000, .1)
     span
       font-size 50px
       font-weight 700
@@ -42,8 +43,14 @@ div#vs
       height 300px
       position absolute
       top 50%
-      margin-top -150px
+      margin-top -120px
       width 100%
-      h2,
-      h3
-        text-shadow 1px 1px 1px #ffffff
+      .name
+        font-family $primaryTypeface
+        font-size 30px
+        margin 0px
+      .hex
+        margin 0px 0px 20px 0px
+        font-size 20px
+        text-transform lowercase
+        color $greyText

@@ -11,22 +11,12 @@ var beigeWatch = require('./beigewatch.js');
 
 exports.index = function(req, res){
 
-  var beiges = beige.getTwoRandom();
-
-
+  var beiges = req.session.beiges || beige.getTwoRandom();
+  req.session.beiges = beiges;
 
   var params = {
     title: 'Subtle Variations of Beige',
-    beiges: beiges/*: [
-      {
-        name: "Blanched Almonds",
-        hex: "#ffebcd"
-      },
-      {
-        name: "Coconut Cream Pie",
-        hex: "#F1EFDA"
-      }
-    ]*/
+    beiges: beiges
   };
 
   res.render('index', params);
