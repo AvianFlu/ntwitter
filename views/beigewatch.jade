@@ -1,0 +1,11 @@
+extends layout
+
+
+block content
+  h2= title
+
+  ul
+  //- div= tweets
+  for i in tweets
+    li= i.text
+

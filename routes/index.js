@@ -6,10 +6,11 @@
 var claim = require('./claim.js');
 var vote = require('./vote.js');
 var hallOfBeige = require('./hallofbeige.js');
+var beigeWatch = require('./beigewatch.js');
 
 exports.index = function(req, res){
-  var params = { 
-    title: 'Subtle Variations of Beige', 
+  var params = {
+    title: 'Subtle Variations of Beige',
     beiges: [
       {
         name: "Blanched Almonds",
@@ -32,3 +33,4 @@ exports.postIndex = function (req, res) {
 exports.vote = vote;
 exports.claim = claim;
 exports.hallofbeige = hallOfBeige;
+exports.beigewatch = beigeWatch;
