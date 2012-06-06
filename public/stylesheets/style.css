@@ -272,7 +272,9 @@ h2 {
 }
 h2.subtitle {
   text-align: center;
-  margin-top: 90px;
+  position: absolute;
+  width: 100%;
+  top: 70px;
 }
 html {
   padding: 0;

@@ -6,7 +6,10 @@
 #beigehall ul li {
   width: 96%;
   margin: 0;
-  padding: 40px 2%;
+  padding: 80px 2%;
+}
+#beigehall ul li:first-child {
+  padding-top: 210px;
 }
 #beigehall ul h3,
 #beigehall ul h4 {
