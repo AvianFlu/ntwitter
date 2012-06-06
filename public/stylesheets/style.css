@@ -262,17 +262,13 @@ a {
 h1 {
   font-family: "bello-pro", sans-serif;
   font-size: 38px;
-<<<<<<< HEAD
   color: #464646;
-=======
-  color: #5c5a58;
   font-weight: normal;
->>>>>>> 8c645cb980215bf95161d05a118fce9455acd913
   text-shadow: 1px 1px 0px #fff3e1;
 }
 h2 {
   font: 18px "futura-pt", "Lucida Grande", Helvetica, Arial, sans-serif;
-  color: #010101;
+  color: #464646;
   font-weight: bold;
 }
 h2.subtitle {
