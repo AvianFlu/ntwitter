@@ -17,7 +17,7 @@ var express = require('express')
   , TWITTER_KEYS = require('./private.js');
 
 var TWITTER_CONSUMER_KEY = TWITTER_KEYS.TWITTER_CONSUMER_KEY;
-var TWITTER_CONSUMER_SECRET = TWITTER_KEYS.TWITTER_CONSUMER_SECRET; 
+var TWITTER_CONSUMER_SECRET = TWITTER_KEYS.TWITTER_CONSUMER_SECRET;
 
 passport.serializeUser(function(user, done) {
   done(null, user);
@@ -108,6 +108,8 @@ app.get('/claim-a-beige', routes.claim.index);
 app.post('/claim-a-beige', routes.claim.claimBeige);
 
 app.get('/hall-of-beige', routes.hallofbeige.index);
+
+app.get('/beige-watch', routes.beigewatch.index);
 
 app.get('/auth/twitter',
   passport.authenticate('twitter'),
