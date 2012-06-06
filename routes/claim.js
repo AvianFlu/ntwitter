@@ -4,33 +4,72 @@ var claimdb = require('../db/claimdb.js');
 
 exports.index = function (req, res) {
 
+	var beige = {
+		name: ''
+	}
+
+	res.render('claim', {
+		title: 'Claim-a-beige',
+		beige: beige
+	});
 }
 
 exports.claimBeige = function (req, res) {
-
-}
-
-exports.postClaimBeige = function (req, res) {
-	//var hex = '#F5F5DC'; //req.param.colorHex;
-	//var user_id = '1234567890';
-	
 	var hex = req.body.hex;
-
+	
 	if(req.session.userid !== undefined) {
-		claimdb.claimBeige('#F5F5DC', user_id, function(err, hex) {
+		claimdb.claimBeige(hex, req.session.user_id, function(err, hex) {
 			if(err) {
 				result(null, res);
 			}
 			console.log('Beige Claimed!!');
-			result(true, res);
+			//result(true, res);
+			res.render('claimed', {
+				title: 'claimed'
+			})
 
 		});		
 	}
 	else {
+
 		// Ask user to sign in to Twitter.
-		result(true, res, 'notloggedin');
+		//result(true, res, 'notloggedin');
+		res.render('notbeige',{
+			title: 'notbeige'
+		})
 	}
 
+}
+
+exports.serviceClaimBeige = function (req, res) {
+	//var hex = '#F5F5DC'; //req.param.colorHex;
+	//var user_id = '1234567890';
+	
+	var hex = req.body.hex;
+	console.log(hex);
+	
+	try {
+
+		if(req.session.userid !== undefined) {
+			claimdb.claimBeige(hex, req.session.user_id, function(err, hex) {
+				if(err) {
+					result(null, res);
+				}
+				console.log('Beige Claimed!!');
+				result(true, res);
+
+			});		
+		}
+		else {
+
+			// Ask user to sign in to Twitter.
+			result(true, res, 'notloggedin');
+		}
+
+	}
+	catch(e) {
+		console.error(e);
+	}
 
 }
 

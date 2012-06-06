@@ -3,6 +3,11 @@
  * Module dependencies.
  */
 
+var beige = require('./lib/beige.js');
+//console.log(beige.getTwoRandom());
+console.log()
+beige.generate100Randoms();
+
 var express = require('express')
   , routes = require('./routes')
   , gzippo = require('gzippo')
@@ -43,7 +48,7 @@ passport.use(new TwitterStrategy({
       }
       usersdb.userLogin(twitObj, function (err, res) {
         console.log(res);
-        req.session.userid = twitObj.id;
+        //req.session.userid = twitObj.id;
       })
       return done(null, profile);
     });

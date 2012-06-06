@@ -8,8 +8,10 @@ var Schema = mongoose.Schema,
 
 var claimSchema = new Schema({
 	_id: String,
-	hexColour: String,
-	twitterId: String
+	hex: String,
+	name: String,
+	twitterId: String//,
+	//ra
 });
 
 var claimModel = mongoose.model('claims', claimSchema);
@@ -31,6 +33,17 @@ exports.claimBeige = function (hexColour, twitterid, callback) {
 	});
 }
 
+exports.getAllBeiges = function (callback) {
+	claimModel.find( function (err, docs) {
+		if(err) { 
+			console.error('Error:', err); 
+			callback(err);
+		}
+		else {
+			callback(null, docs);
+		}
+	});
+}
 
 /*exports.cl = function (hexColor, userObj, callback) {
 

@@ -1,8 +1,8 @@
-h1= title
-div#beigeClaim
-  form(method='post')
-    fieldset
-      legend beigeClaimLeg
+div#outer
+  div#beigeClaim
+    form(method='post')
+      legend#beigeClaimLeg
         p
-          label (for='beige[hex]') Hex:
-            input(type: 'text', name!= beige[name]) #  
+          label(for='hex') Hex:
+            input(type='text', name= 'hex') #
+          input(type='submit', text='submit') 
