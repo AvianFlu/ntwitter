@@ -117,6 +117,7 @@ app.get('/auth/twitter',
 app.get('/auth/twitter/callback',
   passport.authenticate('twitter', { failureRedirect: '/login' }),
   function(req, res) {
+    req.session.user_id = req.user.id;
     res.redirect('/');
   }
 );
