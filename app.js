@@ -65,6 +65,7 @@ app.configure(function(){
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(require('stylus').middleware({ src: __dirname + '/public' }));
+  app.set('view options', { layout: false });
   app.use(express.cookieParser());
   app.use(express.session({ secret: 'greedy beige hogger' }));
   app.use(passport.initialize());
@@ -105,6 +106,8 @@ app.get('/beiged', routes.vote.done);
 
 app.get('/claim-a-beige', routes.claim.index);
 app.post('/claim-a-beige', routes.claim.claimBeige);
+
+app.get('/hall-of-beige', routes.hallofbeige.index);
 
 app.get('/auth/twitter',
   passport.authenticate('twitter'),

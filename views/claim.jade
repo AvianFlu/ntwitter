@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+extends layout
+
+block stylesheets
+  link(rel='stylesheet', href='/stylesheets/claim_animation.css')
+
+block content
+  div#beigeClaim
+    form(method='post')
+      legend#beigeClaimLeg
+        p
+          label(for='name')
+            input(type='text', name= 'name', placeholder="Name", class="name")
+          label(for='hex')
+            input(type='text', name= 'hex', placeholder="#", class="hex")
+          input(type='submit', value='Claim', class="claim")
+=======
 link(rel='stylesheet', href='/stylesheets/claim_animation.css')
 div#beigeClaim
   form(method='post')
@@ -8,3 +25,4 @@ div#beigeClaim
         label(for='hex')
           input(type='text', name= 'hex', placeholder="#", class="hex")
         input(type='submit', value='Claim', class="claim")
+>>>>>>> d35acdc81cb26fa9f7af2399395f1289cd335426
