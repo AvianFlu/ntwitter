@@ -1,8 +1,10 @@
-div#outer
-  div#beigeClaim
-    form(method='post')
-      legend#beigeClaimLeg
-        p
-          label(for='hex') Hex:
-            input(type='text', name= 'hex') #
-          input(type='submit', text='submit') 
+link(rel='stylesheet', href='/stylesheets/claim_animation.css')
+div#beigeClaim
+  form(method='post')
+    legend#beigeClaimLeg
+      p
+        label(for='name')
+          input(type='text', name= 'name', placeholder="Name", class="name")
+        label(for='hex')
+          input(type='text', name= 'hex', placeholder="#", class="hex")
+        input(type='submit', text='submit', class="claim")

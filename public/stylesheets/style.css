@@ -273,6 +273,11 @@ body header {
   text-align: center;
   z-index: 200;
 }
+body div.content {
+  overflow: hidden;
+  height: 100%;
+  position: relative;
+}
 body footer {
   height: 80px;
   background: #232323;
@@ -445,6 +450,58 @@ div#vs .choice div.desc {
 div#vs .choice div.desc h2,
 div#vs .choice div.desc h3 {
   text-shadow: 1px 1px 1px #fff;
+}
+#beigeClaim {
+  width: 300px;
+  margin: 0 auto;
+}
+#beigeClaim input {
+  width: 300px;
+  padding: 10px;
+  outline: none;
+  font-size: 18px;
+  border: 1px solid #cecece;
+  background-color: #fff;
+}
+#beigeClaim input.name {
+  border-bottom: none;
+  -webkit-border-top-left-radius: 7px;
+  -webkit-border-top-right-radius: 7px;
+  -moz-border-radius-topleft: 7px;
+  -moz-border-radius-topright: 7px;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+}
+#beigeClaim input.hex {
+  -webkit-border-bottom-left-radius: 7px;
+  -webkit-border-bottom-right-radius: 7px;
+  -moz-border-radius-bottomleft: 7px;
+  -moz-border-radius-bottomright: 7px;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+#beigeClaim input[type="submit"] {
+  margin-top: 20px;
+  width: 322px;
+  display: inline-block;
+  color: #555;
+  padding: 0.8em 1.5em;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  background: -webkit-linear-gradient(top, #f2f2f2, #d5d5d5);
+  border: 1px solid #cecece;
+  border-bottom-color: #c2c2c2;
+  text-shadow: 1px 1px 0px rgba(255,255,255,0.6);
+  text-decoration: none;
+  box-shadow: inset 0px 1px 0px #fff;
+}
+#beigeClaim input[type="submit"]:hover {
+  background: -webkit-linear-gradient(top, #e8e8e8, #dcdcdc);
+}
+#beigeClaim input[type="submit"]:active {
+  margin-top: 1px;
 }
 .ir {
   display: block;

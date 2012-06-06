@@ -14,7 +14,8 @@ html
     header
       h1 Subtle Variations of Beige
       //h2 The world is too colourful
-    != body
+    div.content
+      != body
     footer
       div.tweet
         div.img_wrapper
@@ -26,5 +27,5 @@ html
           a.username(href='#/#{user.username}/') #{user.username}
         - else
           a.light_button(href='/auth/twitter') Login
-        a.light_button.cta(href="#") Claim your Beige
+        a.light_button.cta(href="/claim-a-beige") Claim your Beige
         a.light_button.cta(href="#") The Hall of beige
