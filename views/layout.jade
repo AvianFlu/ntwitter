@@ -5,20 +5,26 @@ html
     script(type='text/javascript', src='/javascripts/jquery-1.7.2.min.js')
     script(type='text/javascript', src='/javascripts/color.js')
     script(type='text/javascript', src='/javascripts/beige.js')
+    script(type='text/javascript', src='http://use.typekit.com/qdy0hot.js')
+    script(type='text/javascript')
+      try{Typekit.load();}catch(e){}
     link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel='stylesheet', href='/stylesheets/dev_style.css')
   body
     header
       h1 Subtle Variations of Beige
-      h2 The world is too colourful
+      //h2 The world is too colourful
     != body
     footer
       div.tweet
-        span @someonebeigey
-        p this is the tweet
-      - if (user != undefined)
-        a(href='#/#{user.username}/') #{user.username}
-      - else
-        a(href='/auth/twitter') Login
-      a.cta(href="#") Claim your Beige
-      a.cta(href="#") The Hall of beige
+        div.img_wrapper
+          img(src="/img/filler/holowaychuk.jpeg")
+        span @tjholowaychuk
+        p Cum sociis natoque penatibus et magnis dis parturient.
+      div.links
+        - if (user != undefined)
+          a.username(href='#/#{user.username}/') #{user.username}
+        - else
+          a.light_button(href='/auth/twitter') Login
+        a.light_button.cta(href="#") Claim your Beige
+        a.light_button.cta(href="#") The Hall of beige

@@ -15,8 +15,8 @@ exports.index = function(req, res){
         hex: "#ffebcd"
       },
       {
-        name: "Rosy Brown",
-        hex: "#856363"
+        name: "Coconut Cream Pie",
+        hex: "#F1EFDA"
       }
     ]
   };
