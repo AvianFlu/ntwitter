@@ -8,15 +8,18 @@ html
     script(type='text/javascript', src='http://use.typekit.com/qdy0hot.js')
     script(type='text/javascript')
       try{Typekit.load();}catch(e){}
+
+    block scripts
     link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel='stylesheet', href='/stylesheets/dev_style.css')
+    block stylesheets
+    
   body
     header
       a(href="/")
         h1 Subtle Variations of Beige
-      //h2 The world is too colourful
     div.content
-      != body
+      block content
     footer
       div.tweet
         div.img_wrapper
@@ -29,4 +32,4 @@ html
         - else
           a.light_button(href='/auth/twitter') Login
         a.light_button.cta(href="/claim-a-beige") Claim your Beige
-        a.light_button.cta(href="#") The Hall of beige
+        a.light_button.cta(href="/hall-of-beige") The Hall of beige

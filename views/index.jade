@@ -1,12 +1,17 @@
-script(type='text/javascript', src='/javascripts/vote-client.js')
-div#vs
-  div.vs
-    span vs
-  a.light_button.refresh Refresh Contestants
-  each beige in beiges
-    section.choice(style='background-color: #{beige.hex}', data-hex='#{beige.hex}', id='#{beige.hex}', data-name='#{beige.name}')
-      div.container
-        div.desc
-          h2 #{beige.name}
-          h3 #{beige.hex}
-          a.light_button.vote(href='#', data-hex='#{beige.hex}') Vote
+extends layout
+
+block scripts
+  script(type='text/javascript', src='/javascripts/vote-client.js')
+
+block content
+  div#vs
+    div.vs
+      span vs
+    a.light_button.refresh Refresh Contestants
+    each beige in beiges
+      section.choice(style='background-color: #{beige.hex}', data-hex='#{beige.hex}', id='#{beige.hex}', data-name='#{beige.name}')
+        div.container
+          div.desc
+            h2 #{beige.name}
+            h3 #{beige.hex}
+            a.light_button.vote(href='#', data-hex='#{beige.hex}') Vote

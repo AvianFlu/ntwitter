@@ -5,6 +5,7 @@
 
 var claim = require('./claim.js');
 var vote = require('./vote.js');
+var hallOfBeige = require('./hallofbeige.js');
 
 exports.index = function(req, res){
   var params = { 
@@ -30,3 +31,4 @@ exports.postIndex = function (req, res) {
 
 exports.vote = vote;
 exports.claim = claim;
+exports.hallofbeige = hallOfBeige;
