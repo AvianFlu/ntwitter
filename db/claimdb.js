@@ -62,6 +62,12 @@ exports.addAppear = function (first, second, callback) {
 	})
 }
 
+exports.resetVotes = function (callback) {
+	claimModel.update({}, { $set: {appeared: 0, votes: 0}}, { multi: true }, function (err) {
+		callback(err);
+	});
+}
+
 /*exports.cl = function (hexColor, userObj, callback) {
 
 	var inst = new voteModel();

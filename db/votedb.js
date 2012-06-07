@@ -8,7 +8,8 @@ var Schema = mongoose.Schema,
 
 var voteSchema = new Schema({
 	_id: String,
-	hexColor: String,
+	winHex: String,
+	loseHex: String,
 	votedDateTime: Date,
 	twitterId: String,
 	sessionId: String,
@@ -18,10 +19,11 @@ var voteSchema = new Schema({
 
 var voteModel = mongoose.model('votes', voteSchema);
 
-exports.addVote = function (hexColor, userObj, callback) {
+exports.addVote = function (winHex, loseHex, userObj, callback) {
 
 	var inst = new voteModel();
-	inst.hexColor = hexColor;
+	inst.winHex = winHex;
+	inst.loseHex = loseHex;
 	inst.votedDateTime = new Date();
 
 	if(userObj.id !== undefined) { inst.userid = userObj.id;}

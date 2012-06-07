@@ -6,7 +6,7 @@
 var beige = require('./lib/beige.js');
 //console.log(beige.getTwoRandom());
 console.log()
-console.log(beige.generate100Randoms());
+//console.log(beige.generate100Randoms());
 //beige.importBeigesToDB();
 
 var express = require('express')
@@ -90,6 +90,9 @@ app.dynamicHelpers({
 app.get('/', routes.index);
 app.post('/', routes.postIndex);
 
+//TESTING - reset votes and appeared numbers.
+//app.get('/reset', routes.resetVotes);
+
 app.get('/vote', routes.vote.index);
 app.post('/vote', routes.vote.postVote);
 
@@ -104,16 +107,13 @@ app.get('/beigewatch', routes.beigewatch.index);
 
 app.get('/auth/twitter',
   passport.authenticate('twitter'),
-  function(req, res){
-    console.log('Twitter login requested.')
-  }
+  function(req, res){}
 );
 
 app.get('/auth/twitter/callback',
   passport.authenticate('twitter', { failureRedirect: '/login' }),
   function(req, res) {
     req.session.user_id = req.user.id;
-    console.log('Twitter login callback received.');
     res.redirect('/');
   }
 );

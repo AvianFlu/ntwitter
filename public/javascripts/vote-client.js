@@ -7,9 +7,16 @@ $(function() {
 			url: '/vote',
 			data: {'hex': hex},
 			type: 'post'
-		}).done(function () {
+		}).done(function (data) {
+			console.log(data);
 			console.log('voted', hex);
-			window.location = '/';
+
+			if(data.voted === false) {
+				console.log('Vote not counted');
+			}
+			else {
+				window.location = '/';
+			}
 		})	
 	})
 })
