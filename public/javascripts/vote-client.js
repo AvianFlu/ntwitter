@@ -9,6 +9,7 @@ $(function() {
 			type: 'post'
 		}).done(function () {
 			console.log('voted', hex);
+			window.location = '/';
 		})	
 	})
 })

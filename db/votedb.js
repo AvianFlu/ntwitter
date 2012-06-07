@@ -10,7 +10,7 @@ var voteSchema = new Schema({
 	_id: String,
 	hexColor: String,
 	votedDateTime: Date,
-	twitterAccount: String,
+	twitterId: String,
 	sessionId: String,
 	ipAddress: String,
 	userid: Number
@@ -25,7 +25,7 @@ exports.addVote = function (hexColor, userObj, callback) {
 	inst.votedDateTime = new Date();
 
 	if(userObj.id !== undefined) { inst.userid = userObj.id;}
-	if(userObj.twitterAccount !== undefined) { inst.twitterAccount = userObj.twitterAccount; }
+	if(userObj.twitterId !== undefined) { inst.twitterId = userObj.twitterId; }
 	if(userObj.sessionId !== undefined) { inst.sessionId = userObj.sessionId; }
 
 	inst.save (function (err) {

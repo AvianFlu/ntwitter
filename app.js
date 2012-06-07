@@ -6,7 +6,8 @@
 var beige = require('./lib/beige.js');
 //console.log(beige.getTwoRandom());
 console.log()
-beige.generate100Randoms();
+console.log(beige.generate100Randoms());
+//beige.importBeigesToDB();
 
 var express = require('express')
   , routes = require('./routes')

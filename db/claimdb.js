@@ -10,8 +10,9 @@ var claimSchema = new Schema({
 	_id: String,
 	hex: String,
 	name: String,
-	twitterId: String//,
-	//ra
+	twitterId: String,
+	votes: Number,
+	appeared: Number
 });
 
 var claimModel = mongoose.model('claims', claimSchema);
@@ -44,6 +45,21 @@ exports.getAllBeiges = function (callback) {
 			callback(null, docs);
 		}
 	});
+}
+
+exports.addVote = function (hex, callback) {
+	claimModel.update({hex: hex}, { $inc: {votes: 1}}, {}, function (err) {
+		callback(err);
+	});
+}
+
+exports.addAppear = function (first, second, callback) {
+	claimModel.update({hex: first.hex}, { $inc: {appeared: 1}}, {}, function (err) {
+		callback(err);
+	})
+	claimModel.update({hex: second.hex}, { $inc: {appeared: 1}}, {}, function (err) {
+		callback(err);
+	})
 }
 
 /*exports.cl = function (hexColor, userObj, callback) {
