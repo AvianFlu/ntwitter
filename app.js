@@ -16,8 +16,7 @@ var express = require('express')
   , passport = require('passport')
   , TwitterStrategy = require('passport-twitter').Strategy
   , usersdb = require('./db/usersdb.js')
-  , TWITTER_KEYS = require('./private.js')
-  , helpers = require('./lib/helpers');
+  , TWITTER_KEYS = require('./private.js');
 
 var TWITTER_CONSUMER_KEY = TWITTER_KEYS.TWITTER_CONSUMER_KEY;
 var TWITTER_CONSUMER_SECRET = TWITTER_KEYS.TWITTER_CONSUMER_SECRET;
