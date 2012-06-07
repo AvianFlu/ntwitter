@@ -303,7 +303,7 @@ body header h1 {
 }
 body div.content {
   overflow: hidden;
-  /*height: 100%;*/
+/* height 100% */
   position: relative;
 }
 body footer {

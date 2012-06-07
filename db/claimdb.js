@@ -62,6 +62,18 @@ exports.addAppear = function (first, second, callback) {
 	})
 }
 
+exports.getTop10 = function (callback) {
+	claimModel
+		.where('votes').gte(0)
+		.select('hex', 'name', 'twitterId', 'votes')
+		.limit(10)
+		.desc('votes')
+		.run(function(err, docs) {
+			//console.log(docs);
+			callback(err, docs);
+		})
+}
+
 exports.resetVotes = function (callback) {
 	claimModel.update({}, { $set: {appeared: 0, votes: 0}}, { multi: true }, function (err) {
 		callback(err);

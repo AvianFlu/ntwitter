@@ -8,33 +8,10 @@ block content
 
   div#beigehall
     ul
-      li(style="background: blanchedAlmond;")
-        h3 1. beigeName
-        h4 beigeHex
-        span by 
-          a(href="/") userName
-      li(style="background: beige;")
-        h3 2. beigeName
-        h4 beigeHex
-        span by 
-          a(href="/") userName
-      li(style="background: khaki;")
-        h3 3. beigeName
-        h4 beigeHex
-        span by 
-          a(href="/") userName
-      li
-        h3 4. beigeName
-        h4 beigeHex
-        span by 
-          a(href="/") userName
-      li
-        h3 5. beigeName
-        h4 beigeHex
-        span by 
-          a(href="/") userName
-      li
-        h3 6. beigeName
-        h4 beigeHex
-        span by 
-          a(href="/") userName
+      for beige, i in top10
+        li(style="background: blanchedAlmond;")
+          h3 #{i+1}. #{beige.name}
+          h4 #{beige.hex}
+          span by 
+            a(href="/") #{beige.twitterId}
+      
