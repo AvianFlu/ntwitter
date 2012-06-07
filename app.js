@@ -4,6 +4,7 @@
  */
 
 var beige = require('./lib/beige.js');
+
 //console.log(beige.getTwoRandom());
 //console.log(beige.generate100Randoms());
 //beige.importBeigesToDB();
@@ -14,7 +15,19 @@ var express = require('express')
   , passport = require('passport')
   , TwitterStrategy = require('passport-twitter').Strategy
   , usersdb = require('./db/usersdb.js')
-  , TWITTER_KEYS = require('./private.js');
+  , TWITTER_KEYS = require('./private.js')
+  , io = require('socket.io').listen(3001)
+  , twitter = require('./lib/twitter');
+
+twitter.addSocketIO(io);
+
+io.sockets.on('connection', function (socket) {
+//   socket.emit('news', { hello: 'world' });
+//   socket.on('my other event', function (data) {
+//     console.log(data);
+//   });
+});
+
 
 var TWITTER_CONSUMER_KEY = TWITTER_KEYS.TWITTER_CONSUMER_KEY;
 var TWITTER_CONSUMER_SECRET = TWITTER_KEYS.TWITTER_CONSUMER_SECRET;
@@ -48,7 +61,6 @@ passport.use(new TwitterStrategy({
 var app = module.exports = express.createServer();
 
 // Configuration
-
 app.configure(function(){
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');

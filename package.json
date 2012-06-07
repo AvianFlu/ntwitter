@@ -12,6 +12,8 @@
     , "passport-twitter": ">= 0.0.1"
     , "request": ">= 2.9.202"
     , "mysql": ">= 0.9.6"
-    , "nodeunit": ">=0.7.4"
+    , "nodeunit": ">= 0.7.4"
+    , "ntwitter": ">= 0.3.0"
+    , "socket.io": ">= 0.9.6"
   }
 }
