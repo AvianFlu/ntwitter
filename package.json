@@ -11,7 +11,7 @@
     , "passport": ">= 0.0.1"
     , "passport-twitter": ">= 0.0.1"
     , "request": ">= 2.9.202"
-  	, "mysql": ">= 0.9.6"
-  	, "nodeunit": ">=0.7.4"
+    , "mysql": ">= 0.9.6"
+    , "nodeunit": ">=0.7.4"
   }
 }
