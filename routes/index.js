@@ -7,7 +7,7 @@ var claimdb = require('../db/claimdb.js');
 
 var claim = require('./claim.js');
 var vote = require('./vote.js');
-var hallOfBeige = require('./hallofbeige.js');
+var hallofbeige = require('./hallofbeige.js');
 var beige = require('../lib/beige.js');
 var beigeWatch = require('./beigewatch.js');
 
@@ -39,5 +39,5 @@ exports.resetVotes = function (req, res) {
 
 exports.vote = vote;
 exports.claim = claim;
-exports.hallofbeige = hallOfBeige;
+exports.hallofbeige = hallofbeige;
 exports.beigewatch = beigeWatch;
