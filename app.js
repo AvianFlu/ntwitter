@@ -40,17 +40,7 @@ passport.use(new TwitterStrategy({
       // represent the logged-in user.  In a typical application, you would want
       // to associate the Twitter account with a user record in your database,
       // and return that user instead.
-/*      console.log('profile:', profile);
-      var twitObj = {
-        id: profile.id,
-        name: profile.username,
-        display: profile.displayName
-      }
-      usersdb.userLogin(twitObj, function (err, res) {
-        console.log(res);
-        //req.session.userid = twitObj.id;
-      })
-      return done(null, profile);*/
+      return done(null, profile);
     });
   }
 ));
@@ -113,13 +103,16 @@ app.get('/beigewatch', routes.beigewatch.index);
 
 app.get('/auth/twitter',
   passport.authenticate('twitter'),
-  function(req, res){}
+  function(req, res){
+    console.log('Twitter login requested.')
+  }
 );
 
 app.get('/auth/twitter/callback',
   passport.authenticate('twitter', { failureRedirect: '/login' }),
   function(req, res) {
     req.session.user_id = req.user.id;
+    console.log('Twitter login callback received.');
     res.redirect('/');
   }
 );
