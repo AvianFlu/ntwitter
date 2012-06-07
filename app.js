@@ -4,9 +4,7 @@
  */
 
 var beige = require('./lib/beige.js');
-
 //console.log(beige.getTwoRandom());
-console.log()
 //console.log(beige.generate100Randoms());
 //beige.importBeigesToDB();
 
