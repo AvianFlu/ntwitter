@@ -18,6 +18,14 @@ var usersSchema = new Schema({
 
 var usersModel = mongoose.model('users', usersSchema);
 
+exports.getTwitterName = function (twitterID, i, callback) {
+	usersModel.find({ twitterID: twitterID}, function (err, doc) {
+		console.log('getTwitterName:',doc, doc[0].twitterName);
+		doc.i = i;
+		callback(err, doc);
+	});
+}
+
 exports.userLogin = function (twitterObj, callback) {
 
 	_accountExists(twitterObj, function(err, exists) {

@@ -10,7 +10,7 @@ var claimSchema = new Schema({
 	_id: String,
 	hex: String,
 	name: String,
-	twitterId: String,
+	twitterId: Number,
 	votes: Number,
 	appeared: Number
 });
