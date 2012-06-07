@@ -21,13 +21,7 @@ var express = require('express')
 
 twitter.addSocketIO(io);
 
-io.sockets.on('connection', function (socket) {
-//   socket.emit('news', { hello: 'world' });
-//   socket.on('my other event', function (data) {
-//     console.log(data);
-//   });
-});
-
+io.sockets.on('connection', function (socket) {});
 
 var TWITTER_CONSUMER_KEY = TWITTER_KEYS.TWITTER_CONSUMER_KEY;
 var TWITTER_CONSUMER_SECRET = TWITTER_KEYS.TWITTER_CONSUMER_SECRET;
