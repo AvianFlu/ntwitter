@@ -1,6 +1,10 @@
 Asynchronous Twitter client API for node.js
 ===========================================
 
+MRdNk - added update_profile_image method.
+
+------------------
+
 [ntwitter](http://github.com/AvianFlu/ntwitter) is an upgraded version of jdub's [node-twitter](http://github.com/jdub/node-twitter), which in turn was inspired by, and uses some code from, technoweenie's [twitter-node](http://github.com/technoweenie/twitter-node).
 
 ## Installation
@@ -116,4 +120,3 @@ If you contribute and would like to see your name here, please add it with your 
 
 - Complete the convenience functions, preferably generated
 - Support [recommended reconnection behaviour](http://dev.twitter.com/pages/user_streams_suggestions) for the streaming APIs
-
