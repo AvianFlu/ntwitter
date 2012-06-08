@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 Asynchronous Twitter client API for node.js
 ===========================================
 
@@ -121,19 +120,3 @@ If you contribute and would like to see your name here, please add it with your 
 
 - Complete the convenience functions, preferably generated
 - Support [recommended reconnection behaviour](http://dev.twitter.com/pages/user_streams_suggestions) for the streaming APIs
-
-=======
-beige
-=====
-
-Subtle variations of beige
-
-- 'You greedy beige hogger'
-- 'Cease and de-beige'
-- 'Crimson tide'
-- 'This ain't no beige'
-- 'Hands off my beige'
-- 'beige spotting'
-- 'beige watch'
-- 'It ain't me beige'
->>>>>>> f152adcb1a9fa0f00d0b4b01fb5e09d67e3a43e9
