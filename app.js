@@ -20,11 +20,9 @@ var express = require('express')
   , twitter = require('./lib/twitter');
 
 var latestTweet = {};
-
 twitter.addSocketIO(io);
-// twitter.getLatest(function (err, latest) {
-//   latestTweet: latest;
-// })
+// twitter.sendTweet("I'm alive and Tweeting! (Directly from Application). @smallhadron @maximmcnair @domudall @danversmccabe.", 
+//   function (err, data) {});
 
 io.sockets.on('connection', function (socket) {});
 

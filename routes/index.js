@@ -20,13 +20,12 @@ exports.index = function(req, res){
     title: 'Subtle Variations of Beige',
     beiges: beiges
   };
-
+  
   res.render('index', params);
 };
 
-exports.postIndex = function (req, res) {
-
-};
+//Replaced by AJAX
+//exports.postIndex = function (req, res) {};
 
 //Current for testing purposes only, could be integrated into an admin area if necessary.
 exports.resetVotes = function (req, res) {
