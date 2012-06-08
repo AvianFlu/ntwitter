@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 { 
   "name": "ntwitter", 
   "version": "0.3.0",
@@ -21,3 +22,53 @@
   "engines": {"node":">=0.4.0 < 0.7.0"}, 
   "main": "./lib/twitter"
 }
+=======
+{
+    "name": "beige"
+  , "version": "0.0.1"
+  , "author": "bristol-hacknight"
+  , "contributors": [
+    {
+      "name": "MRdNk"
+    },
+    {
+      "name": "domudall"
+    },
+    {
+      "name": "maximmcnair"
+    },
+    {
+      "name": "danversmccabe"
+    },
+    {
+      "name": "theozaurus"
+    },
+    {
+      "name": "smallhadroncollider"
+    }
+  ]
+  , "dependencies": {
+      "express": "2.5.2"
+    , "stylus": ">= 0.0.1"
+    , "jade": ">= 0.0.1"
+    , "gzippo": ">= 0.1.0"
+    , "mongoose": ">= 2.6.4"
+    , "passport": ">= 0.0.1"
+    , "passport-twitter": ">= 0.0.1"
+    , "request": ">= 2.9.202"
+    , "mysql": ">= 0.9.6"
+    , "nodeunit": ">= 0.7.4"
+    , "ntwitter": ">= 0.3.0"
+    , "socket.io": ">= 0.9.6"
+    , "ntwitter": "git@github.com:MRdNk/ntwitter.git#master"
+  }
+  , "engine": {
+    "node": ">= 0.6.17"
+  }
+  , "repository": {
+    "type": "git",
+    "url": "https://github.com/bristol-hacknight/beige.git"
+  },
+
+}
+>>>>>>> f152adcb1a9fa0f00d0b4b01fb5e09d67e3a43e9

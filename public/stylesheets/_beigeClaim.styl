@@ -1,0 +1,50 @@
+#beigeClaim
+  width 300px
+  margin 0 auto
+  display block
+  padding-top 70px
+  input
+    width 300px
+    padding 15px
+    outline none
+    font-size 18px
+    border 1px solid lighten($greyText, 50%)
+    background-color rgba(#ffffff, 0.8)
+    box-shadow inset 0px 1px 0px rgba(darken(#ffffff, 5%), 1)
+    &.name
+      border-bottom none
+      -webkit-border-top-left-radius 7px
+      -webkit-border-top-right-radius 7px
+      -moz-border-radius-topleft 7px
+      -moz-border-radius-topright 7px
+      border-top-left-radius 7px
+      border-top-right-radius 7px
+    &.hex
+      -webkit-border-bottom-left-radius 7px
+      -webkit-border-bottom-right-radius 7px
+      -moz-border-radius-bottomleft 7px
+      -moz-border-radius-bottomright 7px
+      border-bottom-left-radius 7px
+      border-bottom-right-radius 7px
+      margin-bottom 20px
+    &:focus
+      background #ffffff
+  input[type="submit"]
+    width 332px
+    display inline-block
+    color #555555
+    padding 0.8em 1.5em
+    border-radius 5px
+    font-size 14px
+    font-weight 700
+    text-align center
+    background -webkit-linear-gradient(top, #f2f2f2, darken(#f2f2f2, 12%))
+    border 1px solid darken(#f2f2f2, 15%)
+    border-bottom-color darken(#f2f2f2, 20%)
+    text-shadow 1px 1px 0px rgba(#ffffff, 0.6)
+    text-decoration none
+    box-shadow inset 0px 1px 0px rgba(#ffffff, 1)
+    &:hover
+      background -webkit-linear-gradient(top, darken(#f2f2f2, 4%), darken(#f2f2f2, 9%))
+    &:active
+      margin-top 1px
