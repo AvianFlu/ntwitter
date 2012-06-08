@@ -21,7 +21,8 @@ var express = require('express')
 
 var latestTweet = {};
 twitter.addSocketIO(io);
-// twitter.sendTweet("I'm alive and Tweeting! (Directly from Application). @smallhadron @maximmcnair @domudall @danversmccabe.", 
+//twitter.updateProfileImg('#CAAC94', null, function (err, data) {});
+//twitter.sendTweet("I'm alive and Tweeting! (Directly from Application). @smallhadron @maximmcnair @domudall @danversmccabe.", 
 //   function (err, data) {});
 
 io.sockets.on('connection', function (socket) {});
