@@ -15,5 +15,6 @@
     , "nodeunit": ">= 0.7.4"
     , "ntwitter": ">= 0.3.0"
     , "socket.io": ">= 0.9.6"
+    , "ntwitter": "git@github.com:MRdNk/ntwitter.git#master"
   }
 }
