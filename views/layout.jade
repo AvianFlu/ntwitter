@@ -24,9 +24,9 @@ html
     footer
       div.tweet#tweet
         div.img_wrapper
-          img(src="/img/filler/holowaychuk.jpeg")
-        span @tjholowaychuk
-        p Cum sociis natoque penatibus et magnis dis parturient.
+          img(src="#{latestTweet.profile_pic}")
+        span #{latestTweet.name} 
+        p #{latestTweet.text} 
       div.links
         - if (user != undefined)
           a.username(href='#/#{user.username}/') #{user.username}

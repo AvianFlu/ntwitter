@@ -19,7 +19,12 @@ var express = require('express')
   , io = require('socket.io').listen(3001)
   , twitter = require('./lib/twitter');
 
+var latestTweet = {};
+
 twitter.addSocketIO(io);
+// twitter.getLatest(function (err, latest) {
+//   latestTweet: latest;
+// })
 
 io.sockets.on('connection', function (socket) {});
 
@@ -61,7 +66,7 @@ app.configure(function(){
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(require('stylus').middleware({ src: __dirname + '/public' }));
-  app.set('view options', { layout: false });
+  app.set('view options', { layout: false});
   app.use(express.cookieParser());
   app.use(express.session({ secret: 'greedy beige hogger' }));
   app.use(passport.initialize());
@@ -88,6 +93,16 @@ app.dynamicHelpers({
   redir: function (req, res) {
     return req.session.redir || undefined;
   }
+})
+
+// All routes go through this first. Allowing us to set the latest tweet in the footer.
+app.all('*', function (req, res, next) {
+  console.log('app.all');
+  twitter.getLatest(function (err, latest) {
+    app.set('view options', { layout: false, latestTweet: latest });
+    //Once the latest tweet has been retrieved we go to the next route - pass control back to proper route.
+    next();
+  })
 })
 
 // Routes
