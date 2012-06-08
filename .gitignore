@@ -13,5 +13,5 @@ logs
 results
 
 node_modules
-!node_modules/ntwitter
+!node_modules/ntwitter/
 npm-debug.log
