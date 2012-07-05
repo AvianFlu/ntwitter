@@ -16,7 +16,7 @@
   "dependencies": { 
     "oauth": ">=0.8.4", 
     "cookies": "0.1.x",
-    "keygrip": "0.1.x"
+    "keygrip": "0.2.x"
   }, 
   "engines": {"node":">=0.4.0"}, 
   "main": "./lib/twitter"
