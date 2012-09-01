@@ -18,6 +18,10 @@
     "cookies": "0.1.x",
     "keygrip": "0.2.x"
   }, 
+  "devDependencies": {
+    "should": "*",
+    "mocha": "*"
+  },
   "engines": {"node":">=0.4.0"}, 
   "main": "./lib/twitter"
 }
