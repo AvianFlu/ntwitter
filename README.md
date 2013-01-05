@@ -96,6 +96,20 @@ twit.stream('statuses/filter', {'locations':'-122.75,36.8,-121.75,37.8,-74,40,-7
 });
 ```
 
+Here is an example of how to call the 'statuses/filter' method using the track and delimited request parameter for more details on [Streaming API request parameters](https://dev.twitter.com/docs/streaming-apis/parameters#delimited) ):
+
+``` javascript
+twit.stream('statuses/filter', {track: ['cool'], delimited: 'length'}, function(stream) {
+  stream.on('data', function (data) {
+    if( 'number' === typeof( data ) ){
+      console.log( data );
+    } else {
+      console.log( data.text );
+    }
+  });
+});
+```
+
 ntwitter also supports user and site streams:
 
 ``` javascript
