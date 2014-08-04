@@ -1,12 +1,12 @@
-Asynchronous Twitter client API for node.js
+Asynchronous Twitter client API for node.js (Up-to-date)
 ===========================================
 
-[ntwitter](http://github.com/AvianFlu/ntwitter) is an improved version of jdub's [node-twitter](http://github.com/jdub/node-twitter), which in turn was inspired by, and uses some code from, technoweenie's [twitter-node](http://github.com/technoweenie/twitter-node).
+[twode](http://github.com/streetlight/twode) is an improved version of [ntwitter](http://github.com/AvianFlu/ntwitter), which  is an improved version of jdub's [node-twitter](http://github.com/jdub/node-twitter), which in turn was inspired by, and uses some code from, technoweenie's [twitter-node](http://github.com/technoweenie/twitter-node).
 
 
 ## Installation
 
-You can install ntwitter and its dependencies with npm: `npm install ntwitter`.
+You can install twode and its dependencies with npm: `npm install twode` (not yet published, so don't try).
 
 
 ## Getting started
@@ -31,7 +31,7 @@ Where `callback` is the parent function's callback.  (Or any other function you 
 The keys listed below can be obtained from [dev.twitter.com](http://dev.twitter.com) after [setting up a new App](https://dev.twitter.com/apps/new).
 
 ``` javascript
-var twitter = require('ntwitter');
+var twitter = require('twode');
 
 var twit = new twitter({
   consumer_key: 'Twitter',
